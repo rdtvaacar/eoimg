@@ -1,0 +1,14 @@
+{
+    "name": "acr/eoi",
+    "description": "E-okul resim isleme",
+    "type": "laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "acr",
+            "email": "acarbey15@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
