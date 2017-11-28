@@ -1,6 +1,6 @@
 <?php
 
-namespace Acr\Eoimg\controllers;
+namespace Acr\Eoimg\Controllers;
 
 
 use Acr\File\Facades\AcrFile;
