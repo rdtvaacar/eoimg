@@ -38,7 +38,7 @@ class ImgControllers extends Controller
         $dosyalar    = $dosya_model->where('acr_file_id', $acr_file_id)->get();
 
         foreach ($dosyalar as $dosya) {
-            $dosyaDizi[] = "acr_files/" . $dosya->acr_file_id . "/e_okul/" . $dosya->file_name . "." . $dosya->file_type;
+            $dosyaDizi[] = "acr_files/" . $dosya->acr_file_id . "/e_okul/" . $dosya->file_name . ".jpg";
         }
         Zipper::make('e_okul/' . 'e-okul_' . $acr_file_id . '.zip')->add($dosyaDizi)->close();
         return response()->download(base_path() . '/public_html/e_okul/' . 'e-okul_' . $acr_file_id . '.zip')->deleteFileAfterSend(true);
