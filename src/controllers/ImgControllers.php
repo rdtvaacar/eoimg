@@ -22,7 +22,7 @@ class ImgControllers extends Controller
             @unlink(base_path() . '/public_html/acr_files/' . $dosya->acr_file_id . '/' . $file);
             @unlink(base_path() . '/public_html/acr_files/' . $dosya->acr_file_id . '/thumbnail/' . $file);
             @unlink(base_path() . '/public_html/acr_files/' . $dosya->acr_file_id . '/medium/' . $file);
-            @unlink(base_path() . '/public_html/acr_files/' . $dosya->acr_file_id . '/e_okul/' . $file);
+            @unlink(base_path() . '/public_html/acr_files/' . $dosya->acr_file_id . '/e_okul/' . $dosya->file_name . '.jpg');
         }
         if (!Auth::check()) {
             Auth::loginUsingId(1);
