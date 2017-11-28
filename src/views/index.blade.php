@@ -6,9 +6,8 @@
     <title>E-okul Çevrimiçi Resim Düzenleme Programı</title>
 @stop
 @section('acr_index')
-
-    <div class="container" style="width: 100%;">
-        <div class="col-md-8">
+    <div class="col-md-8">
+        <div class="box box-primary">
             <!-- e-okul-resim -->
             <ins class="adsbygoogle"
                  style="display:inline-block;width:728px;height:90px"
@@ -22,17 +21,16 @@
             <a href="/acr/eoimg/arsivle/indir?acr_file_id={{$acr_file_id}}" style="float: right" class="btn btn-warning btn-lg">Arşivle ve İndir</a>
             <div style="margin-left: auto; margin-right: auto;"> {!! AcrFile::form() !!}</div>
         </div>
-        <div class="col-md-4">
-            <!-- e-okul-sağ -->
-            <ins class="adsbygoogle"
-                 style="display:inline-block;width:300px;height:600px"
-                 data-ad-client="ca-pub-9863574640622060"
-                 data-ad-slot="1771317334"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-
+    </div>
+    <div class="col-md-4">
+        <!-- e-okul-sağ -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:600px"
+             data-ad-client="ca-pub-9863574640622060"
+             data-ad-slot="1771317334"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </div>
 @stop
 @section('footer')
