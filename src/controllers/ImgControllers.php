@@ -15,7 +15,6 @@ class ImgControllers extends Controller
 
     function upload()
     {
-        ini_set('memory_limit','256M');
         $dosya_model = new Acr_files_childs();
         $dosyalar    = $dosya_model->where('created_at', '<=', date('Y-m-d H:i:s', strtotime("-1 hour")))->get();
         foreach ($dosyalar as $dosya) {
@@ -25,9 +24,6 @@ class ImgControllers extends Controller
             @unlink(base_path() . '/public_html/acr_files/' . $dosya->acr_file_id . '/medium/' . $file);
             @unlink(base_path() . '/public_html/acr_files/' . $dosya->acr_file_id . '/e_okul/' . $dosya->file_name . '.jpg');
             @unlink(base_path() . '/public_html/acr_files/' . $dosya->acr_file_id . '/temp/' . $dosya->file_name . '.jpg');
-        }
-        if (!Auth::check()) {
-            Auth::loginUsingId(1);
         }
         $acr_file_id = empty($acr_file_id) ? AcrFile::create(NULL) : $acr_file_id;
         return View('Eoimg::index', compact('acr_file_id'));
