@@ -8,13 +8,15 @@
 @section('acr_index')
     <div class="col-md-12">
         <div class="box box-primary">
-            <div class="alert alert-info">Fotoğrafları <strong>"Dosyaları Seç"</strong> butonundan seçin ve yükleme işlemini bitirin ardından <strong>"Arşivle ve İndir" </strong> butonuna basarak bilgisayarrınıza kaydedin.</div>
+            <div class="alert alert-info">Fotoğrafları <strong>"Dosyaları Seç"</strong> butonundan seçin ve yükleme işlemini bitirin ardından <strong>"Arşivle ve İndir" </strong> butonuna basarak bilgisayarrınıza kaydedin. Kaydetme <strong>ZİP
+                    arşiv</strong> dosyası olarak gerçekleşir ve yüklediğiniz tüm dosyalar içindedir.
+            </div>
             <!-- e-okul-resim -->
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <ins class="adsbygoogle"
-                 style="display:inline-block;width:728px;height:90px"
+                 style="display:block"
                  data-ad-client="ca-pub-9863574640622060"
-                 data-ad-slot="7704625701"></ins>
+                 data-ad-slot="4601085682"
+                 data-ad-format="auto"></ins>
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
@@ -23,7 +25,6 @@
         </div>
     </div>
     <div class="col-md-12">
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- E-okul-alt -->
         <ins class="adsbygoogle"
              style="display:block"
@@ -36,6 +37,6 @@
     </div>
 @stop
 @section('footer')
-
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     {!! AcrFile::js($acr_file_id,0,1) !!}
 @stop

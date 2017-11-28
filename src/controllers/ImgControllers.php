@@ -15,6 +15,7 @@ class ImgControllers extends Controller
 
     function upload()
     {
+        ini_set('memory_limit','256M');
         $dosya_model = new Acr_files_childs();
         $dosyalar    = $dosya_model->where('created_at', '<=', date('Y-m-d H:i:s', strtotime("-1 hour")))->get();
         foreach ($dosyalar as $dosya) {
