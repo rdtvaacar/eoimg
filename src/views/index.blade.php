@@ -25,11 +25,11 @@
         </div>
     </div>
     <div class="col-md-12">
-        <!-- E-okul-alt -->
+        <!-- e-okul esnek 2 -->
         <ins class="adsbygoogle"
              style="display:block"
              data-ad-client="ca-pub-9863574640622060"
-             data-ad-slot="4601085682"
+             data-ad-slot="5203064377"
              data-ad-format="auto"></ins>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
