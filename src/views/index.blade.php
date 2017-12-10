@@ -1,14 +1,18 @@
 @extends('index')
 @section('header')
     {!! AcrFile::css() !!}
+
 @stop
 @section('title')
-    <title>E-okul Çevrimiçi Resim Düzenleme Programı</title>
+    <title>E-okul Çevrimiçi Toplu Resim Düzenleme Programı</title>
 @stop
 @section('acr_index')
+
     <div class="col-md-12">
         <div class="box box-primary">
-            <div class="alert alert-info">Fotoğrafları <strong>"Dosyaları Seç"</strong> butonundan seçin ve yükleme işlemini bitirin ardından <strong>"Arşivle ve İndir" </strong> butonuna basarak bilgisayarrınıza kaydedin. Kaydetme <strong>ZİP
+
+            <div class="alert alert-info">Fotoğrafları <strong>"Dosyaları Seç"</strong> butonundan seçin ve yükleme işlemini bitirin ardından <strong>"Arşivle ve İndir" </strong> butonuna basarak bilgisayarrınıza kaydedin. Kaydetme
+                <strong>ZİP
                     arşiv</strong> dosyası olarak gerçekleşir ve yüklediğiniz tüm dosyalar içindedir.
             </div>
             <!-- e-okul-resim -->
@@ -21,7 +25,7 @@
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
             <a href="/acr/eoimg/arsivle/indir?acr_file_id={{$acr_file_id}}" style="float: right" class="btn btn-warning btn-lg">Arşivle ve İndir</a>
-            <div style="margin-left: auto; margin-right: auto;"> {!! AcrFile::form() !!}</div>
+            {!! AcrFile::form() !!}
         </div>
     </div>
     <div class="col-md-12">

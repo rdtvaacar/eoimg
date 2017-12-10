@@ -26,7 +26,9 @@ class ImgControllers extends Controller
             @unlink(base_path() . '/public_html/acr_files/' . $dosya->acr_file_id . '/temp/' . $dosya->file_name . '.jpg');
         }
         $acr_file_id = empty($acr_file_id) ? AcrFile::create(NULL) : $acr_file_id;
+        $dosya_model->where('created_at', '<=', date('Y-m-d H:i:s', strtotime("-1 hour")))->delete();
         return View('Eoimg::index', compact('acr_file_id'));
+
     }
 
     function arsivle_indir(Request $request)
