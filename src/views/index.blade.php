@@ -24,7 +24,10 @@
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
-            <a href="/acr/eoimg/arsivle/indir?acr_file_id={{$acr_file_id}}" style="float: right" class="btn btn-warning btn-lg">Arşivle ve İndir</a>
+            <div title="Yüklediğiniz resimleri ve belgeleri indirmek için tıklayınız.">
+                Yüklediğiniz resimleri ve belgeleri indirmek için tıklayınız.
+                <a href="/acr/eoimg/arsivle/indir?acr_file_id={{$acr_file_id}}" style="float: right" class="btn btn-warning btn-lg">Arşivle ve İndir</a>
+            </div>
             {!! AcrFile::form() !!}
         </div>
     </div>
