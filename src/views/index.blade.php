@@ -29,7 +29,7 @@
                     <div style="clear:both;"></div>
                     <br>
                 @else
-                    Yan Kesimi Kapatın <a href="/?yan_kesim=1" class="btn btn-sm btn-dark">YAN KESİM KAPAT</a>
+                    <a href="/?yan_kesim=0" class="btn btn-sm btn-dark">YAN KESİM KAPAT</a>
                     <div style="clear:both;"></div>
                     <br>
                 @endif
