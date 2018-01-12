@@ -13,7 +13,7 @@ use Zipper;
 class ImgControllers extends Controller
 {
 
-    function upload()
+    function upload(Request $request)
     {
         $dosya_model = new Acr_files_childs();
         $dosyalar    = $dosya_model->where('created_at', '<=', date('Y-m-d H:i:s', strtotime("-1 hour")))->get();
@@ -27,7 +27,9 @@ class ImgControllers extends Controller
         }
         $acr_file_id = empty($acr_file_id) ? AcrFile::create(NULL) : $acr_file_id;
         $dosya_model->where('created_at', '<=', date('Y-m-d H:i:s', strtotime("-1 hour")))->delete();
-        return View('Eoimg::index', compact('acr_file_id'));
+        $yan_kesim = $request->yan_kesim;
+
+        return View('Eoimg::index', compact('acr_file_id', 'yan_kesim'));
 
     }
 

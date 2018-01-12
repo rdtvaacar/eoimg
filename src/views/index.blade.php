@@ -10,7 +10,6 @@
 
     <div class="col-md-12">
         <div class="box box-primary">
-
             <div class="alert alert-info">Fotoğrafları <strong>"Dosyaları Seç"</strong> butonundan seçin ve yükleme işlemini bitirin ardından <strong>"Arşivle ve İndir" </strong> butonuna basarak bilgisayarrınıza kaydedin. Kaydetme
                 <strong>ZİP
                     arşiv</strong> dosyası olarak gerçekleşir ve yüklediğiniz tüm dosyalar içindedir.
@@ -24,6 +23,17 @@
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
+            <div style="text-align: right;">
+                @if(empty($yan_kesim))
+                    Resminizin yan olması durumunda kullanılır. Önce bu butona basın ve ardından resimlerinizi yükleyin. <a href="/?yan_kesim=1" class="btn btn-sm btn-danger">YAN KESİM AÇ</a>
+                    <div style="clear:both;"></div>
+                    <br>
+                @else
+                    Yan Kesimi Kapatın <a href="/?yan_kesim=1" class="btn btn-sm btn-dark">YAN KESİM KAPAT</a>
+                    <div style="clear:both;"></div>
+                    <br>
+                @endif
+            </div>
             <div title="Yüklediğiniz resimleri ve belgeleri indirmek için tıklayınız.">
                 Yüklediğiniz resimleri ve belgeleri indirmek için tıklayınız.
                 <a href="/acr/eoimg/arsivle/indir?acr_file_id={{$acr_file_id}}" style="float: right" class="btn btn-warning btn-lg">Arşivle ve İndir</a>
@@ -45,5 +55,5 @@
 @stop
 @section('footer')
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    {!! AcrFile::js($acr_file_id,0,1) !!}
+    {!! AcrFile::js($acr_file_id,0,1,$yan_kesim) !!}
 @stop
